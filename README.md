@@ -4,7 +4,7 @@
 
 # PySpark Engineering Lab
 
-**A structured, hands-on learning journey through Apache Spark & PySpark**
+**My structured, hands-on learning journey through Apache Spark & PySpark**
 
 ![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -15,7 +15,7 @@
 
 ---
 
-## 📌 Overview
+## Overview
 
 This repository documents a progressive, milestone-based learning journey into **Apache Spark** and **PySpark** — one of the most critical tools in the modern Data Engineering stack. The lab was conducted on the **Databricks** platform using real-world retail datasets and covers everything from first principles (reading data, schema definition) through to production patterns (Delta tables, window functions, Spark SQL, and UDFs).
 
@@ -64,7 +64,7 @@ pyspark-engineering-lab/
 
 ---
 
-## 📂 Datasets & Databricks Setup
+## Datasets & Databricks Setup
 
 Both raw datasets live in [`data/raw/`](data/raw/) and must be uploaded to your Databricks workspace before running any lesson. Follow the steps below exactly once — all lessons will then work out of the box.
 
@@ -91,7 +91,7 @@ Both raw datasets live in [`data/raw/`](data/raw/) and must be uploaded to your 
 | `Outlet_Type` | STRING | Store type (e.g. `Supermarket Type1`, `Grocery Store`) |
 | `Item_Outlet_Sales` | DOUBLE | Sales revenue for the item at that outlet |
 
-> ⚠️ `Outlet_Size` intentionally contains null values — this is the dataset used for the Null Handling milestone.
+>  `Outlet_Size` intentionally contains null values — this is the dataset used for the Null Handling milestone.
 
 ---
 
@@ -129,7 +129,7 @@ This is an F1 drivers dataset in **newline-delimited JSON** format (one JSON obj
 
 ---
 
-### ⬆️ Uploading Data to Databricks
+### Uploading Data to Databricks
 
 There are two approaches depending on your Databricks tier.
 
@@ -189,7 +189,7 @@ df_json = spark.read.format("json") \
 
 ---
 
-### ✅ Verify Your Data is Ready
+### Verify Your Data is Ready
 
 Run this quick sanity check in your first notebook cell before starting Milestone 01:
 
@@ -211,7 +211,7 @@ print(f"Drivers rows: {df_json.count()}")
 
 ---
 
-## 🏁 Learning Milestones
+## Learning Milestones
 
 ### Milestone 01 — Spark Fundamentals
 **File:** [`lessons/01-spark-fundamentals/spark_fundamentals.py`](lessons/01-spark-fundamentals/spark_fundamentals.py)
@@ -356,7 +356,7 @@ UDFs allow custom Python logic to operate on DataFrame columns when no built-in 
 - **MRP Tier Classifier** — buckets items into `Budget`, `Mid-Range`, `Premium` price tiers
 - **Inline Lambda UDF** — doubles sales values in a single expression
 
-> ⚠️ **Performance warning:** UDFs break Catalyst query optimisation and require serialising data between the JVM and the Python interpreter row-by-row. Always prefer built-in `pyspark.sql.functions` equivalents. Use UDFs only when no built-in alternative exists. For high-throughput workloads, consider **Pandas UDFs** (`@pandas_udf`) — they operate on batches and avoid per-row serialisation overhead.
+> **Performance warning:** UDFs break Catalyst query optimisation and require serialising data between the JVM and the Python interpreter row-by-row. Always prefer built-in `pyspark.sql.functions` equivalents. Use UDFs only when no built-in alternative exists. For high-throughput workloads, consider **Pandas UDFs** (`@pandas_udf`) — they operate on batches and avoid per-row serialisation overhead.
 
 ---
 
@@ -416,7 +416,7 @@ Spark SQL lets you query DataFrames using standard ANSI SQL. It is especially po
 
 ---
 
-## 📦 Datasets Used
+## Datasets Used
 
 | Dataset | Repo Location | Description | Rows |
 |---|---|---|---|
@@ -428,7 +428,7 @@ Spark SQL lets you query DataFrames using standard ANSI SQL. It is especially po
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### Option 1 — Databricks Repos (Recommended)
 
@@ -467,7 +467,7 @@ df.show()
 
 ---
 
-## 📈 Learning Path
+## Learning Path
 
 ```
 01 Fundamentals  →  02 Transformations  →  03 Strings & Dates
@@ -481,7 +481,7 @@ Each milestone builds on the previous. It is recommended to follow the numbered 
 
 ---
 
-## 💡 Key Takeaways
+## Key Takeaways
 
 - **Schema-first thinking** — always define schemas explicitly; never rely on Spark's schema inference in production
 - **Built-ins over UDFs** — Catalyst-optimised built-in functions outperform Python UDFs by orders of magnitude
@@ -492,7 +492,7 @@ Each milestone builds on the previous. It is recommended to follow the numbered 
 
 ---
 
-## 📚 Further Reading
+## Further Reading
 
 - [PySpark Official Documentation](https://spark.apache.org/docs/latest/api/python/)
 - [Databricks Learning Academy](https://www.databricks.com/learn/training)
