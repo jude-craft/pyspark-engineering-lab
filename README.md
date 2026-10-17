@@ -503,7 +503,7 @@ Each milestone builds on the previous. It is recommended to follow the numbered 
 
 <div align="center">
 
-*Built as part of a hands-on Data Engineering learning journey.*
+*Built as part of my hands-on Data Engineering learning journey.*
 *Apache Spark · PySpark · Databricks · Delta Lake*
 
 </div>
