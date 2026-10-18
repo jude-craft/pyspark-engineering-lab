@@ -17,7 +17,7 @@
 
 ## Overview
 
-This repository documents a progressive, milestone-based learning journey into **Apache Spark** and **PySpark** — one of the most critical tools in the modern Data Engineering stack. The lab was conducted on the **Databricks** platform using real-world retail datasets and covers everything from first principles (reading data, schema definition) through to production patterns (Delta tables, window functions, Spark SQL, and UDFs).
+This repository documents a progressive, milestone-based learning journey into **Apache Spark** and **PySpark** — one of the most critical tools in the modern Data Engineering stack. I conducted the lab on **Databricks** platform using real-world retail datasets and covered everything from first principles (reading data, schema definition) through to production patterns (Delta tables, window functions, Spark SQL, and UDFs).
 
 Each lesson is an isolated, runnable `.py` file that can be executed directly in a Databricks notebook or imported as a Databricks Workspace notebook.
 
@@ -477,7 +477,7 @@ df.show()
 07 UDFs  →  08 Data Writing  →  09 Spark SQL
 ```
 
-Each milestone builds on the previous. It is recommended to follow the numbered order, as later lessons assume familiarity with concepts introduced earlier.
+Each milestone builds on the previous. I recommend to follow the numbered order, as later lessons assume familiarity with concepts introduced earlier.
 
 ---
 
